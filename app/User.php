@@ -36,4 +36,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    
+    public function Attend(){
+         return $this->hasOne(App\Attend);
+    }
+    
+    public function Leave(){
+         return $this->hasOne(App\Leave);
+    }
 }
